@@ -23,8 +23,8 @@ class Employee
 			rank = employee.rank;
 		}
 		Employee() {}
-		void	print_info(void);
-		int		calculate_pay(void);
+		virtual void	print_info(void);
+		virtual int		calculate_pay(void);
 };
 
 void	Employee::print_info(void)
@@ -51,8 +51,8 @@ class	Manager : public Employee
 			year_of_service = manager.year_of_service;
 	}
 	Manager(void) : Employee() {}
-	int		calculate_pay(void);
-	void	print_info(void);
+	int		calculate_pay(void) override;
+	void	print_info(void) override;
 };
 
 void	Manager::print_info(void)
